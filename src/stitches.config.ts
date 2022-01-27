@@ -1,16 +1,10 @@
 import {
-  gold,
-  goldDark,
-  green,
-  greenDark,
   slate,
   slateDark,
   teal,
   tealDark,
   tomato,
   tomatoDark,
-  yellow,
-  yellowDark,
 } from '@radix-ui/colors';
 import type * as Stitches from '@stitches/react';
 import { createStitches } from '@stitches/react';
@@ -24,11 +18,7 @@ export const { config, styled, getCssText, theme, createTheme, css } =
         serif: 'serif',
       },
       colors: {
-        ...goldDark,
-        ...greenDark,
         ...slateDark,
-        ...greenDark,
-        ...yellowDark,
         ...tealDark,
         ...tomatoDark,
         uiBg: '$slate1',
@@ -227,11 +217,8 @@ export const { config, styled, getCssText, theme, createTheme, css } =
 
 export const lightTheme = createTheme({
   colors: {
-    ...gold,
     ...teal,
     ...slate,
-    ...green,
-    ...yellow,
     ...tomato,
     uiBg: '$slate1',
     surface1: '$slate1',
