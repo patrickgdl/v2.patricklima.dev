@@ -8,7 +8,6 @@ export default class Document extends NextDocument {
       <Html lang='en'>
         <Head>
           <link rel='shortcut icon' href='/favicon.png' />
-          <link rel='canonical' href='https://patricklima.dev' />
           <style
             id='stitches'
             dangerouslySetInnerHTML={{ __html: getCssText() }}
