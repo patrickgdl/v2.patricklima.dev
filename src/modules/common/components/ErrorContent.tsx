@@ -10,7 +10,7 @@ export const ErrorContent = ({ statusCode }: ErrorProps): JSX.Element => {
       <div>
         <NextLink passHref href='/'>
           <Link
-            color='3'
+            color='2'
             size={{
               '@initial': '1',
               '@bp2': '2',

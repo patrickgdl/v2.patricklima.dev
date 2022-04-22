@@ -60,7 +60,7 @@ export const MDX_ELEMENTS: Record<string, React.ReactNode> = {
   ),
   a: (props: any) => (
     <Link
-      color='3'
+      color='2'
       css={{
         css: {
           fontSize: 'inherit',

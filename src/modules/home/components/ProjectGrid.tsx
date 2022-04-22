@@ -15,7 +15,6 @@ import {
   ProjectMeta,
   PROJECT_METADATA,
 } from '@work/utils/constants/projects.constants';
-import Image from 'next/image';
 import NextLink from 'next/link';
 import * as React from 'react';
 
@@ -27,9 +26,9 @@ export const ProjectGrid = (): JSX.Element => {
         <ScrollContainerThumb />
       </ScrollContainerScrollbar>
       <ScrollContainerViewport>
-        <Stack gap='s' css={{ mb: '$l' }} direction='row'>
-          {projectEntries.map(([, project], idx) => (
-            <Card key={idx} project={project} />
+        <Stack gap='s' direction='row'>
+          {projectEntries.map(([, client], idx) => (
+            <Card key={idx} client={client} />
           ))}
         </Stack>
       </ScrollContainerViewport>
@@ -38,10 +37,10 @@ export const ProjectGrid = (): JSX.Element => {
 };
 
 interface CardProps {
-  project: ProjectMeta;
+  client: ProjectMeta;
 }
 const Card = ({
-  project: { tags, project, path, images },
+  client: { tags, client, path, images },
 }: CardProps): JSX.Element => {
   const tagsString = parseTagsToString(tags);
   const [, image] = images;
@@ -59,28 +58,15 @@ const Card = ({
       }}
     >
       <LinkBox>
-        <Stack gap='s'>
-          <ProjectImageContainer>
-            <Image
-              src={image}
-              priority
-              alt={`${project} project image`}
-              layout='responsive'
-              blurDataURL={image}
-              placeholder='blur'
-              width={220}
-              height={275}
-              quality={95}
-            />
-          </ProjectImageContainer>
-          <Box css={{ px: '$3xs' }}>
+        <Stack gap='xs'>
+          <Box css={{ px: '$m' }}>
             <NextLink passHref href={`${PATHS.work}/[project]`} as={path}>
               <LinkOverlay
                 data-testid={path}
                 style={{ display: 'inline-block' }}
               >
-                <H3 leading='tight' size='1' css={{ pb: '$3xs' }}>
-                  {project}
+                <H3 leading='tight' size='1' css={{ pb: '$2xs' }}>
+                  {client}
                 </H3>
               </LinkOverlay>
             </NextLink>

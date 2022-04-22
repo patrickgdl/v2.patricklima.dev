@@ -3,6 +3,7 @@ export const PATHS = {
   twitter: 'https://twitter.com/opatrickgdl',
   linkedin: 'https://www.linkedin.com/in/patrickgdl/',
   picpayURL: 'https://www.picpay.com.br/',
+  c6bankURL: 'https://www.c6bank.com.br/',
   email: 'mailto:patrickgdlima@gmail.com',
   base: process.env.NEXT_PUBLIC_URL,
   home: '/',

@@ -14,8 +14,8 @@ export const { config, styled, getCssText, theme, createTheme, css } =
     // Default Theme
     theme: {
       fonts: {
-        primary: 'sans-serif',
-        serif: 'serif',
+        primary: 'Inter, sans-serif',
+        serif: 'DM Serif Display, serif',
       },
       colors: {
         ...slateDark,
@@ -36,8 +36,9 @@ export const { config, styled, getCssText, theme, createTheme, css } =
         default: '225ms cubic-bezier(0.4, 0, 0.2, 1)',
       },
       fontWeights: {
-        bold: 700,
         regular: 400,
+        medium: 500,
+        bold: 700,
       },
       fontSizes: {
         1: 'clamp(0.80rem, 0.69rem + 0.48vw, 1.00rem)',

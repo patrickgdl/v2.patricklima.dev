@@ -40,8 +40,9 @@ export const text = css({
       4: { color: '$text4' },
     },
     weight: {
-      bold: { fontWeight: '$bold' },
       regular: { fontWeight: '$regular' },
+      medium: { fontWeight: '$medium' },
+      bold: { fontWeight: '$bold' },
     },
     family: {
       primary: {
@@ -49,7 +50,6 @@ export const text = css({
       },
       serif: {
         fontFamily: '$serif',
-        fontStyle: 'italic',
       },
     },
   },
@@ -57,8 +57,16 @@ export const text = css({
     color: '1',
     family: 'primary',
     leading: 'body',
-    size: '2',
+    size: '1',
+    weight: 'medium',
+  },
+});
+
+export const heading = css(text, {
+  defaultVariants: {
+    family: 'serif',
     weight: 'regular',
+    size: '2',
   },
 });
 
@@ -69,12 +77,12 @@ export const Paragraph = styled('p', text);
 export const ListItem = styled('li', text);
 export const Small = styled('small', text);
 export const Deleted = styled('del', text);
-export const H1 = styled('h1', text);
-export const H2 = styled('h2', text);
-export const H3 = styled('h3', text);
-export const H4 = styled('h4', text);
-export const H5 = styled('h5', text);
-export const H6 = styled('h6', text);
+export const H1 = styled('h1', heading);
+export const H2 = styled('h2', heading);
+export const H3 = styled('h3', heading);
+export const H4 = styled('h4', heading);
+export const H5 = styled('h5', heading);
+export const H6 = styled('h6', heading);
 
 export const focus = css({
   transition: '$default',
@@ -128,8 +136,7 @@ export const link = css({
     color: {
       1: { color: '$text1', $$hoverColor: '$colors$slate11' },
       2: { color: '$text2', $$hoverColor: '$colors$slate9' },
-      3: { color: '$text3', $$hoverColor: '$colors$teal9' },
-      4: { color: '$text4', $$hoverColor: '$colors$slate2' },
+      3: { color: '$text4', $$hoverColor: '$colors$slate2' },
     },
     leading: {
       tight: { lineHeight: '$tight' },
@@ -169,7 +176,7 @@ export const link = css({
   defaultVariants: {
     color: '1',
     leading: 'tight',
-    size: '2',
+    size: '1',
   },
 });
 
@@ -186,5 +193,5 @@ export const PageHeader = styled('h1', {
 export const BodyText = styled('p', {
   color: '$text1',
   lineHeight: '$body',
-  fontSize: '$2',
+  fontSize: '$1',
 });

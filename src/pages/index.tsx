@@ -3,15 +3,7 @@ import { CustomLink } from '@common/components/CustomLink';
 import { Flex } from '@common/components/Flex';
 import { Grid } from '@common/components/Grid';
 import { Stack } from '@common/components/Stack';
-import {
-  BodyText,
-  H1,
-  H2,
-  H3,
-  Link,
-  Paragraph,
-  Text,
-} from '@common/components/Text';
+import { H1, H2, H3, Link, Paragraph, Text } from '@common/components/Text';
 import { PATHS } from '@common/utils/constants/paths.constants';
 import {
   parseDateToLongDateString,
@@ -48,34 +40,31 @@ const Index = ({
       <VisuallyHidden.Root>
         <H1>Home</H1>
       </VisuallyHidden.Root>
-      <Stack gap='3xl'>
+      <Stack gap='2xl'>
         {/* Intro */}
         <Stack as='section' gap='xl'>
           <Stack gap='m'>
-            <Paragraph style={{ maxWidth: 600 }}>
-              Frontend UI engineer interested in design systems, component
-              architectures, React and Angular.
-            </Paragraph>
-          </Stack>
-          <Stack gap='xs'>
-            <H2 color='2' aria-label="What I'm up to now" size='1'>
-              Now
-            </H2>
             <Paragraph>
-              Currently working as a Frontend Developer for the largest digital
-              wallet platform in Brazil&mdash;
+              Frontend UI engineer interested in design systems, component
+              architectures and JavaScript frameworks, specially React and
+              Angular.
+            </Paragraph>
+
+            <Paragraph>
+              Working as a Frontend Developer at
               <Link
                 target='_blank'
-                href={PATHS.picpayURL}
+                href={PATHS.c6bankURL}
                 rel='noreferrer'
                 underline='whileHover'
-                color='3'
+                color='2'
               >
-                Picpay
+                &nbsp;C6Bank&nbsp;
               </Link>
-              .
+              &mdash; the best digital bank in Brazil.
             </Paragraph>
-            <BodyText>
+
+            <Paragraph>
               Other stuff I&apos;m working on{' '}
               <CustomLink
                 data-cy='now-link'
@@ -84,12 +73,12 @@ const Index = ({
               >
                 now
               </CustomLink>
-            </BodyText>
+            </Paragraph>
           </Stack>
         </Stack>
 
         {/* Work */}
-        <Stack as='section' gap='s'>
+        <Stack as='section' gap='m'>
           <Flex direction='row' justify='between' align='center'>
             <H2 leading='tight'>Selected work</H2>
             {/* TODO: Add once work page is necessary */}
@@ -158,8 +147,7 @@ const Index = ({
           <Stack gap='xl'>
             <Paragraph>
               I&apos;m not currently looking for new opportunities, but feel
-              free to reach out if you&apos;d like. I&apos;m always happy to
-              hear.
+              free to reach out if you&apos;d like.
             </Paragraph>
             <Stack as='ul' gap='s'>
               <ConnectLinkListItem label='Twitter'>

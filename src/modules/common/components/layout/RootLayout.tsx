@@ -28,8 +28,10 @@ const Container = styled('div', {
   ai: 'center',
   flexFlow: 'column',
   height: '$full',
-  px: '$s',
+  px: '$m',
+  py: '$l',
 });
+
 const Wrapper = styled('div', {
   maxWidth: '$channel',
   width: '$full',
@@ -40,6 +42,7 @@ const Wrapper = styled('div', {
   position: 'relative',
   zIndex: '$init',
 });
+
 const Main = styled('main', {
   flex: '1',
   paddingTop: '$5',

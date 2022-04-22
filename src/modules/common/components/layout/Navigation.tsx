@@ -7,7 +7,7 @@ import { ThemeToggle } from '../ThemeToggle';
 
 const NavigationWrapper = styled('nav', {
   pt: '$m',
-  pb: '$2xl',
+  pb: '$xl',
   '@bp1': {
     pt: '$xl',
   },
@@ -22,8 +22,8 @@ export const Navigation = (): JSX.Element => {
             aria-label='logo link'
             css={{ d: 'inline-block', userSelect: 'none' }}
           >
-            <Text size='1' leading='tight' role='presentation'>
-              PATRICK LIMA
+            <Text weight='bold' size='1' leading='tight' role='presentation'>
+              Patrick Lima
             </Text>
           </Link>
         </NextLink>

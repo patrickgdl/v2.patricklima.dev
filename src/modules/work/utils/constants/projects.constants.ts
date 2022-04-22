@@ -24,7 +24,7 @@ const sharedProjectData: Record<
     ],
   },
   madeiramadeira: {
-    client: 'MadeiraMadeira E-commerce',
+    client: 'MadeiraMadeira',
     path: PATHS.madeiramadeira,
     project: 'MadeiraMadeira to Next.js',
     images: [
@@ -34,7 +34,7 @@ const sharedProjectData: Record<
   },
   picpay: {
     project: 'Picpay Legal Person Panel',
-    client: 'Picpay',
+    client: 'PicPay',
     path: PATHS.picpay,
     images: [
       '/images/work/picpay/picpay-laptop-wide.png',
