@@ -78,30 +78,16 @@ const Index = ({
         </Stack>
 
         {/* Work */}
-        <Stack as='section' gap='m'>
+        <Stack as='section' gap='l'>
           <Flex direction='row' justify='between' align='center'>
             <H2 leading='tight'>Selected work</H2>
-            {/* TODO: Add once work page is necessary */}
-            {/* <Grid
-              gap='2xs'
-              justify='end'
-              align='center'
-              css={{ gridTemplateColumns: 'auto auto' }}
-            >
-              <NextLink href={PATHS.work} passHref>
-                <Link css={{ d: 'block' }} color='2' size='1' leading='tight'>
-                  view all
-                </Link>
-              </NextLink>
-              <ArrowRightIcon aria-hidden color='var(--colors-slate11)' />
-            </Grid> */}
           </Flex>
           <ProjectGrid />
         </Stack>
 
         {/* Writing */}
         {hasWritings ? (
-          <Stack as='section' gap='m'>
+          <Stack as='section' gap='l'>
             <Flex direction='row' justify='between' align='center'>
               <H2 leading='tight'>Writing</H2>
               <Grid
