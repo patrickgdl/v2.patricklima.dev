@@ -1,13 +1,6 @@
 import { styled } from '@/stitches.config';
-import { Box } from '@common/components/Box';
-import { LinkBox, LinkOverlay } from '@common/components/LinkBox';
-import {
-  ScrollContainerArea,
-  ScrollContainerScrollbar,
-  ScrollContainerThumb,
-  ScrollContainerViewport,
-} from '@common/components/ScrollContainer';
-import { Stack } from '@common/components/Stack';
+import { Grid } from '@common/components/Grid';
+import { LinkOverlay } from '@common/components/LinkBox';
 import { H3, Paragraph } from '@common/components/Text';
 import { PATHS } from '@common/utils/constants/paths.constants';
 import { parseTagsToString } from '@common/utils/helpers/string.helpers';
@@ -21,18 +14,11 @@ import * as React from 'react';
 export const ProjectGrid = (): JSX.Element => {
   const projectEntries = Object.entries(PROJECT_METADATA);
   return (
-    <ScrollContainerArea>
-      <ScrollContainerScrollbar orientation='horizontal'>
-        <ScrollContainerThumb />
-      </ScrollContainerScrollbar>
-      <ScrollContainerViewport>
-        <Stack gap='s' direction='row'>
-          {projectEntries.map(([, client], idx) => (
-            <Card key={idx} client={client} />
-          ))}
-        </Stack>
-      </ScrollContainerViewport>
-    </ScrollContainerArea>
+    <GridWrapper as='ul'>
+      {projectEntries.map(([, client], idx) => (
+        <Card key={idx} client={client} />
+      ))}
+    </GridWrapper>
   );
 };
 
@@ -46,42 +32,69 @@ const Card = ({
   const [, image] = images;
 
   return (
-    <Box
-      css={{
-        minWidth: '90%',
-        '@bp1': {
-          minWidth: '45%',
-        },
-        '@bp2': {
-          minWidth: 220,
-        },
-      }}
-    >
-      <LinkBox>
-        <Stack gap='xs'>
-          <Box css={{ px: '$m' }}>
-            <NextLink passHref href={`${PATHS.work}/[project]`} as={path}>
-              <LinkOverlay
-                data-testid={path}
-                style={{ display: 'inline-block' }}
-              >
-                <H3 leading='tight' size='1' css={{ pb: '$2xs' }}>
-                  {client}
-                </H3>
-              </LinkOverlay>
-            </NextLink>
+    <CardItem>
+      <CardWrapper>
+        <NextLink passHref href={`${PATHS.work}/[project]`} as={path}>
+          <ProjectLink data-testid={path}>
+            <H3 leading='tight' size='1' css={{ pb: '$2xs' }}>
+              {client}
+            </H3>
+
             <Paragraph color='2' size='1'>
               {tagsString}
             </Paragraph>
-          </Box>
-        </Stack>
-      </LinkBox>
-    </Box>
+          </ProjectLink>
+        </NextLink>
+      </CardWrapper>
+    </CardItem>
   );
 };
 
-const ProjectImageContainer = styled('div', {
-  overflow: 'hidden',
-  borderRadius: '15px',
-  backgroundColor: '$slate8',
+const CardItem = styled('li', {
+  listStyle: 'none',
+});
+
+const CardWrapper = styled('div', {
+  display: 'flex',
+  height: '$full',
+  position: 'relative',
+
+  '@hover': {
+    '&:hover::before': {
+      opacity: 1,
+      backgroundColor: '#8EC5FC',
+      backgroundImage: '$uiHoverGradient',
+      transition: 'all 333ms',
+      transform: 'scale(1)',
+    },
+  },
+
+  '&:before': {
+    content: '',
+    display: 'block',
+    position: 'absolute',
+    zIndex: 0,
+    inset: 'calc($xs*-1)',
+    opacity: 0,
+    padding: '$xs',
+    transform: 'scale(0.9)',
+  },
+});
+
+const ProjectLink = styled(LinkOverlay, {
+  display: 'flex',
+  flexDirection: 'column',
+  position: 'relative',
+  zIndex: 1,
+  width: '$full',
+  height: '$full',
+});
+
+const GridWrapper = styled(Grid, {
+  gridTemplateColumns: 'repeat(1, 1fr)',
+  gap: '$l',
+  '@bp1': {
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gap: '$xl',
+  },
 });
