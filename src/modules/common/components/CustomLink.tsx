@@ -53,7 +53,6 @@ const externalLink = css(link, {
   display: 'inline-grid',
   alignItems: 'center',
   gridTemplateColumns: 'auto min-content',
-  lineHeight: '$tight',
 });
 
 function isExternalLink(href: string): boolean {

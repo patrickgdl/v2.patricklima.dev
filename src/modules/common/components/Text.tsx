@@ -175,7 +175,6 @@ export const link = css({
   },
   defaultVariants: {
     color: '1',
-    leading: 'tight',
     size: '1',
   },
 });
