@@ -22,6 +22,9 @@ export const { config, styled, getCssText, theme, createTheme, css } =
         ...tealDark,
         ...tomatoDark,
         uiBg: '$slate1',
+        uiBgLoContrast: 'hsl(200 7.0% 8.8% / 97%)',
+        uiHoverGradient:
+          'linear-gradient(62deg, rgb(48 69 90) 0%, rgb(108 82 133) 100%)',
         surface1: '$slate1',
         surface2: '$slate12',
         text1: 'white',
@@ -82,6 +85,7 @@ export const { config, styled, getCssText, theme, createTheme, css } =
       sizes: {
         full: '100%',
         channel: '700px',
+        navMaxWidth: '715px',
         screenW: '100vw',
         screenH: '100vh',
         desktop: '1440px',
@@ -90,11 +94,14 @@ export const { config, styled, getCssText, theme, createTheme, css } =
         under: -1,
         over: 1,
         init: 0,
+        max: 999,
       },
       radii: {
         none: 0,
         round: '50%',
         pill: '9999px',
+        1: '8px',
+        2: '12px',
       },
     },
 
@@ -222,6 +229,8 @@ export const lightTheme = createTheme({
     ...slate,
     ...tomato,
     uiBg: '$slate1',
+    uiBgLoContrast: 'hsl(0 100% 100% / 97%)',
+    uiHoverGradient: 'linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)',
     surface1: '$slate1',
     surface2: '$slate12',
     text1: 'black',
