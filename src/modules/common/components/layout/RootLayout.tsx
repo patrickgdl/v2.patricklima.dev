@@ -10,8 +10,9 @@ export const RootLayout = ({ children }: WithChildren): JSX.Element => {
     <>
       <DefaultSeo {...SEO} />
       <Container>
+        <Navigation />
+
         <Wrapper>
-          <Navigation />
           <Main>{children}</Main>
           <Footer />
         </Wrapper>
@@ -29,7 +30,7 @@ const Container = styled('div', {
   flexFlow: 'column',
   height: '$full',
   px: '$m',
-  py: '$l',
+  pb: '$l',
 });
 
 const Wrapper = styled('div', {
@@ -40,6 +41,7 @@ const Wrapper = styled('div', {
   height: '$full',
   minHeight: '$screenH',
   position: 'relative',
+  pt: '$xl',
   zIndex: '$init',
 });
 
