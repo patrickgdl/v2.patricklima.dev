@@ -1,14 +1,13 @@
 import { styled } from '@/stitches.config';
 import { Box } from '@common/components/Box';
 import { Flex } from '@common/components/Flex';
-import { Grid } from '@common/components/Grid';
 import { Stack } from '@common/components/Stack';
 import { Text } from '@common/components/Text';
 import * as React from 'react';
 
 export const Footer = (): JSX.Element => {
   return (
-    <Box as='footer' css={{ pt: '$3xl', pb: '$m', '@bp1': { pb: '$xl' } }}>
+    <Box as='footer' css={{ pt: '$2xl', pb: '$m', '@bp1': { pb: '$xl' } }}>
       <Stack
         css={{ jc: 'center', pb: '$2xl' }}
         direction='row'
@@ -19,38 +18,26 @@ export const Footer = (): JSX.Element => {
         <Dot />
         <Dot />
       </Stack>
-      <Wrapper align='end' gap='s' gapY={{ '@initial': 'xl', '@bp1': 's' }}>
-        <Stack
-          gap='2xs'
-          css={{
-            ta: 'left',
-          }}
-        >
-          <Time />
-          <Text leading='tight' css={{ whiteSpace: 'nowrap' }} size='1'>
-            Araucária, PR - Brazil
+
+      <Stack
+        gap='2xs'
+        css={{
+          ta: 'left',
+        }}
+      >
+        <Flex direction='row' align='end' justify='between'>
+          <Flex direction='column'>
+            <Time />
+            <Text leading='tight' color='2' css={{ pt: '$xs' }} size='1'>
+              Araucária, PR - Brazil
+            </Text>
+          </Flex>
+
+          <Text size='1' leading='tight' color='2'>
+            Creating
           </Text>
-        </Stack>
-        <Flex
-          direction='row'
-          align='center'
-          css={{ justifySelf: 'end', '@bp1': { justifySelf: 'start' } }}
-        >
-          {/* <Weather /> */}
         </Flex>
-        <Text
-          size='1'
-          leading='tight'
-          css={{
-            color: '$slate9',
-            ta: 'center',
-            gridArea: 'c',
-            '@bp1': { ta: 'right' },
-          }}
-        >
-          Creating
-        </Text>
-      </Wrapper>
+      </Stack>
     </Box>
   );
 };
@@ -60,17 +47,6 @@ const Dot = styled('div', {
   width: 2,
   height: 2,
   borderRadius: '$round',
-});
-
-const Wrapper = styled(Grid, {
-  width: '$full',
-  gridTemplateAreas: `'a b'
-                      'c c'`,
-  gridTemplateColumns: 'repeat(2, 1fr)',
-  '@bp1': {
-    gridTemplateAreas: `'a b c'`,
-    gridTemplateColumns: 'repeat(3, 1fr)',
-  },
 });
 
 const Time = (): JSX.Element => {
@@ -91,7 +67,13 @@ const Time = (): JSX.Element => {
   }, []);
 
   return (
-    <Text leading='tight' size='1' dateTime={currentTime.twentyFour} as='time'>
+    <Text
+      color='2'
+      leading='tight'
+      size='1'
+      dateTime={currentTime.twentyFour}
+      as='time'
+    >
       {currentTime.pretty}
     </Text>
   );
