@@ -7,7 +7,15 @@ import { ThemeToggle } from '../ThemeToggle';
 
 const NavigationWrapper = styled('nav', {
   pt: '$m',
-  pb: '$xl',
+  pb: '$s',
+  position: 'sticky',
+  top: 0,
+  width: '$full',
+  backdropFilter: 'blur(2px)',
+  backgroundColor: '$uiBgLoContrast',
+  zIndex: '$max',
+  maxWidth: '$navMaxWidth',
+
   '@bp1': {
     pt: '$xl',
   },
