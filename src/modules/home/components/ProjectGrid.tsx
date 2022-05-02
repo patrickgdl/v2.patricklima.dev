@@ -14,22 +14,19 @@ import * as React from 'react';
 export const ProjectGrid = (): JSX.Element => {
   const projectEntries = Object.entries(PROJECT_METADATA);
   return (
-    <GridWrapper as='ul'>
+    <Grid as='ul' columns={{ '@initial': '1', '@bp1': '3' }} gap='l'>
       {projectEntries.map(([, client], idx) => (
         <Card key={idx} client={client} />
       ))}
-    </GridWrapper>
+    </Grid>
   );
 };
 
 interface CardProps {
   client: ProjectMeta;
 }
-const Card = ({
-  client: { tags, client, path, images },
-}: CardProps): JSX.Element => {
+const Card = ({ client: { tags, client, path } }: CardProps): JSX.Element => {
   const tagsString = parseTagsToString(tags);
-  const [, image] = images;
 
   return (
     <CardItem>
@@ -88,13 +85,4 @@ const ProjectLink = styled(LinkOverlay, {
   zIndex: 1,
   width: '$full',
   height: '$full',
-});
-
-const GridWrapper = styled(Grid, {
-  gridTemplateColumns: 'repeat(1, 1fr)',
-  gap: '$l',
-  '@bp1': {
-    gridTemplateColumns: 'repeat(3, 1fr)',
-    gap: '$xl',
-  },
 });
