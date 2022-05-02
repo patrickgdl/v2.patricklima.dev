@@ -9,9 +9,9 @@ export const RootLayout = ({ children }: WithChildren): JSX.Element => {
   return (
     <>
       <DefaultSeo {...SEO} />
-      <Container>
-        <Navigation />
+      <Navigation />
 
+      <Container>
         <Wrapper>
           <Main>{children}</Main>
           <Footer />

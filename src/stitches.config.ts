@@ -229,7 +229,7 @@ export const lightTheme = createTheme({
     ...slate,
     ...tomato,
     uiBg: '$slate1',
-    uiBgLoContrast: 'hsl(0 100% 100% / 97%)',
+    uiBgLoContrast: 'hsl(206, 30.0%, 98.8%)',
     uiHoverGradient: 'linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)',
     surface1: '$slate1',
     surface2: '$slate12',

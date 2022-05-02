@@ -44,6 +44,10 @@ const Index = ({
         {/* Intro */}
         <Stack as='section' gap='xl'>
           <Stack gap='m'>
+            <Text weight='bold' size='1' leading='tight' role='presentation'>
+              Patrick Lima
+            </Text>
+
             <Paragraph>
               Frontend UI engineer interested in design systems, component
               architectures and JavaScript frameworks, specially React and
