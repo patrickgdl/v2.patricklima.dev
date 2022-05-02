@@ -426,6 +426,7 @@ data-lsp {
   opacity: 0;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
+  stroke: var(--colors-text1);
 
   .animated & {
     opacity: 1;
