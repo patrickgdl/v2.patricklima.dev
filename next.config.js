@@ -9,7 +9,6 @@ const nextConfig = {
   swcMinify: true,
   reactStrictMode: true,
   env: {
-    WEATHER_API_KEY: process.env.WEATHER_API_KEY,
     NEXT_PUBLIC_URL: process.env.NEXT_PUBLIC_URL,
   },
   images: {
