@@ -28,7 +28,12 @@ export const Navigation = (): JSX.Element => {
         direction='row'
         justify='between'
         align='center'
-        css={{ maxWidth: '$navMaxWidth', mx: 'auto' }}
+        css={{
+          maxWidth: '$navMaxWidth',
+          mx: 'auto',
+          px: '$m',
+          '@bp1': { px: 0 },
+        }}
       >
         <NextLink passHref href={PATHS.home}>
           <Link
