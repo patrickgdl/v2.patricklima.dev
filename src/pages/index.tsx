@@ -46,13 +46,13 @@ const Index = ({
             <H2 leading='tight'>Patrick Lima</H2>
 
             <Paragraph>
-              Frontend UI engineer interested in design systems, component
+              Frontend UI developer interested in design systems, component
               architectures and JavaScript frameworks, specially React and
               Angular.
             </Paragraph>
 
             <Paragraph>
-              Working as a Frontend Developer at{' '}
+              Working as a Tech Engineer at{' '}
               <Link
                 target='_blank'
                 href={PATHS.c6bankURL}
