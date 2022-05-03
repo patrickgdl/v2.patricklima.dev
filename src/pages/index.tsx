@@ -13,7 +13,6 @@ import { getAllWritingsData } from '@common/utils/helpers/mdx-data.helpers';
 import { getMetaImage } from '@common/utils/helpers/meta-image.helpers';
 import { MdxData } from '@common/utils/types/mdx-data';
 import { WithChildren } from '@common/utils/types/with-children';
-import { ProjectGrid } from '@home/components/ProjectGrid';
 import { ArrowRightIcon } from '@radix-ui/react-icons';
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
@@ -44,9 +43,7 @@ const Index = ({
         {/* Intro */}
         <Stack as='section' gap='xl'>
           <Stack gap='m'>
-            <Text weight='bold' size='1' leading='tight' role='presentation'>
-              Patrick Lima
-            </Text>
+            <H2 leading='tight'>Patrick Lima</H2>
 
             <Paragraph>
               Frontend UI engineer interested in design systems, component
@@ -55,7 +52,7 @@ const Index = ({
             </Paragraph>
 
             <Paragraph>
-              Working as a Frontend Developer at
+              Working as a Frontend Developer at{' '}
               <Link
                 target='_blank'
                 href={PATHS.c6bankURL}
@@ -63,9 +60,33 @@ const Index = ({
                 underline='whileHover'
                 color='2'
               >
-                &nbsp;C6Bank&nbsp;
-              </Link>
+                C6Bank
+              </Link>{' '}
               &mdash; the best digital bank in Brazil.
+            </Paragraph>
+
+            <Paragraph>
+              In the past I&apos;ve developed at{' '}
+              <Link
+                target='_blank'
+                href={PATHS.picpayURL}
+                rel='noreferrer'
+                underline='whileHover'
+                color='2'
+              >
+                PicPay
+              </Link>{' '}
+              and{' '}
+              <Link
+                target='_blank'
+                href={PATHS.madeiramadeiraURL}
+                rel='noreferrer'
+                underline='whileHover'
+                color='2'
+              >
+                MadeiraMadeira
+              </Link>
+              .
             </Paragraph>
 
             <Paragraph>
@@ -81,15 +102,8 @@ const Index = ({
           </Stack>
         </Stack>
 
-        {/* Work */}
-        <Stack as='section' gap='l'>
-          <Flex direction='row' justify='between' align='center'>
-            <H2 leading='tight'>Selected work</H2>
-          </Flex>
-          <ProjectGrid />
-        </Stack>
-
         {/* Writing */}
+
         {hasWritings ? (
           <Stack as='section' gap='l'>
             <Flex direction='row' justify='between' align='center'>

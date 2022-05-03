@@ -27,15 +27,12 @@ export const Footer = (): JSX.Element => {
       >
         <Flex direction='row' align='end' justify='between'>
           <Flex direction='column'>
-            <Time />
             <Text leading='tight' color='2' css={{ pt: '$xs' }} size='1'>
               Araucária, PR - Brazil
             </Text>
           </Flex>
 
-          <Text size='1' leading='tight' color='2'>
-            Creating
-          </Text>
+          <Time />
         </Flex>
       </Stack>
     </Box>

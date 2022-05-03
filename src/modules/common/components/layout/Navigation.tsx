@@ -7,18 +7,13 @@ import Signature from '../Signature';
 import { ThemeToggle } from '../ThemeToggle';
 
 const NavigationWrapper = styled('nav', {
-  pt: '$m',
-  pb: '$s',
+  py: '$s',
   position: 'sticky',
   top: 0,
   width: '$full',
   backdropFilter: 'blur(2px)',
   backgroundColor: '$uiBgLoContrast',
   zIndex: '$max',
-
-  '@bp1': {
-    pt: '$xl',
-  },
 });
 
 export const Navigation = (): JSX.Element => {
