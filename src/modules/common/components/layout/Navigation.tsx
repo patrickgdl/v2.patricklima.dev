@@ -34,6 +34,7 @@ export const Navigation = (): JSX.Element => {
           <Link
             aria-label='logo link'
             css={{ d: 'inline-block', userSelect: 'none' }}
+            underline='false'
           >
             <Signature animationDuration={2} />
           </Link>

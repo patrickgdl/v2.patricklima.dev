@@ -152,6 +152,9 @@ export const link = css({
       true: {
         textDecoration: 'underline',
       },
+      false: {
+        textDecoration: 'none',
+      },
     },
   },
   defaultVariants: {
