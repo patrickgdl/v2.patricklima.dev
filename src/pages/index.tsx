@@ -4,6 +4,7 @@ import { Flex } from '@common/components/Flex';
 import { Grid } from '@common/components/Grid';
 import { Stack } from '@common/components/Stack';
 import { H1, H2, H3, Link, Paragraph, Text } from '@common/components/Text';
+import UpRightArrow from '@common/components/UpRightArrow';
 import { PATHS } from '@common/utils/constants/paths.constants';
 import {
   parseDateToLongDateString,
@@ -43,12 +44,12 @@ const Index = ({
         {/* Intro */}
         <Stack as='section' gap='xl'>
           <Stack gap='m'>
-            <H2 leading='tight'>Patrick Lima</H2>
+            <Paragraph leading='tight'>Patrick Lima</Paragraph>
 
             <Paragraph>
-              Frontend UI developer interested in design systems, component
-              architectures and JavaScript frameworks, specially React and
-              Angular.
+              <Text family='serif'>Frontend UI developer </Text>
+              interested in design systems, component architectures and
+              JavaScript frameworks, specially React and Angular.
             </Paragraph>
 
             <Paragraph>
@@ -93,11 +94,12 @@ const Index = ({
               Other stuff I&apos;m working on{' '}
               <CustomLink
                 data-cy='now-link'
-                css={{ color: '2', underline: true }}
+                css={{ color: '2', underline: 'whileHover' }}
                 href={PATHS.now}
               >
                 now
               </CustomLink>
+              .
             </Paragraph>
           </Stack>
         </Stack>
@@ -164,8 +166,9 @@ const Index = ({
                   leading='tight'
                   css={{ d: 'inline-block' }}
                 >
-                  @opatrickgdl
-                </Link>
+                  opatrickgdl
+                </Link>{' '}
+                <UpRightArrow />
               </ConnectLinkListItem>
               <ConnectLinkListItem label='Email'>
                 <Link
@@ -176,7 +179,8 @@ const Index = ({
                   color='2'
                 >
                   patrickgdlima@gmail.com
-                </Link>
+                </Link>{' '}
+                <UpRightArrow />
               </ConnectLinkListItem>
               <ConnectLinkListItem label='Github'>
                 <Link
@@ -189,7 +193,8 @@ const Index = ({
                   leading='tight'
                 >
                   patrickgdl
-                </Link>
+                </Link>{' '}
+                <UpRightArrow />
               </ConnectLinkListItem>
             </Stack>
           </Stack>

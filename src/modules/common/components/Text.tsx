@@ -18,15 +18,6 @@ export const text = css({
       5: {
         fontSize: '$5',
       },
-      6: {
-        fontSize: '$6',
-      },
-      7: {
-        fontSize: '$7',
-      },
-      8: {
-        fontSize: '$8',
-      },
     },
     leading: {
       tight: { lineHeight: '$tight' },
@@ -50,6 +41,9 @@ export const text = css({
       },
       serif: {
         fontFamily: '$serif',
+        fontStyle: 'italic',
+        fontWeight: 400,
+        fontSize: '$2',
       },
     },
   },
@@ -58,13 +52,12 @@ export const text = css({
     family: 'primary',
     leading: 'body',
     size: '1',
-    weight: 'medium',
+    weight: 'regular',
   },
 });
 
 export const heading = css(text, {
   defaultVariants: {
-    family: 'serif',
     weight: 'regular',
     size: '2',
   },
@@ -103,9 +96,6 @@ export const link = css({
     outline: 'none',
     boxShadow: '$focus',
   },
-  hover: {
-    color: '$$hoverColor',
-  },
   variants: {
     size: {
       1: {
@@ -122,15 +112,6 @@ export const link = css({
       },
       5: {
         fontSize: '$5',
-      },
-      6: {
-        fontSize: '$6',
-      },
-      7: {
-        fontSize: '$7',
-      },
-      8: {
-        fontSize: '$8',
       },
     },
     color: {
@@ -176,6 +157,7 @@ export const link = css({
   defaultVariants: {
     color: '1',
     size: '1',
+    underline: 'whileHover',
   },
 });
 

@@ -15,20 +15,20 @@ export const { config, styled, getCssText, theme, createTheme, css } =
     theme: {
       fonts: {
         primary: 'Inter, sans-serif',
-        serif: 'DM Serif Display, serif',
+        serif: 'Newsreader, serif',
       },
       colors: {
         ...slateDark,
         ...tealDark,
         ...tomatoDark,
         uiBg: '$slate1',
-        uiBgLoContrast: 'hsl(200 7.0% 8.8% / 97%)',
+        uiBgLoContrast: 'hsl(200 7% 9% / 97%)',
         uiHoverGradient:
           'linear-gradient(62deg, rgb(48 69 90) 0%, rgb(108 82 133) 100%)',
         surface1: '$slate1',
         surface2: '$slate12',
         text1: 'white',
-        text2: '$slate11',
+        text2: '#8f9ba8',
         text3: '$teal11',
         text4: '$slate1',
       },
@@ -49,9 +49,6 @@ export const { config, styled, getCssText, theme, createTheme, css } =
         3: 'clamp(1.25rem, 1.08rem + 0.75vw, 1.56rem)',
         4: 'clamp(1.56rem, 1.35rem + 0.94vw, 1.95rem)',
         5: 'clamp(1.95rem, 1.69rem + 1.18vw, 2.44rem)',
-        6: 'clamp(2.44rem, 2.11rem + 1.47vw, 3.05rem)',
-        7: 'clamp(3.05rem, 2.64rem + 1.84vw, 3.82rem)',
-        8: 'clamp(3.82rem, 3.30rem + 2.30vw, 4.77rem)',
       },
       lineHeights: {
         tight: 1,

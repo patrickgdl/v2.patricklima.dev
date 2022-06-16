@@ -48,6 +48,6 @@ const Wrapper = styled('div', {
 const Main = styled('main', {
   flex: '1',
   paddingTop: '$5',
-  paddingBottom: '$8',
+  paddingBottom: '$5',
   zIndex: 1,
 });
