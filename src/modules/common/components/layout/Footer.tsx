@@ -4,6 +4,7 @@ import { Flex } from '@common/components/Flex';
 import { Stack } from '@common/components/Stack';
 import { Text } from '@common/components/Text';
 import * as React from 'react';
+import { Brazil } from '../Brazil';
 
 export const Footer = (): JSX.Element => {
   return (
@@ -32,7 +33,9 @@ export const Footer = (): JSX.Element => {
             </Text>
           </Flex>
 
-          <Time />
+          <Box>
+            <Brazil /> <Time />
+          </Box>
         </Flex>
       </Stack>
     </Box>

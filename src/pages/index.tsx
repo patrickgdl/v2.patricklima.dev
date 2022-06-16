@@ -149,7 +149,6 @@ const Index = ({
         {/* Connect */}
 
         <Stack as='section' gap='m'>
-          <Paragraph leading='tight'>Connect</Paragraph>
           <Stack gap='xl'>
             <Paragraph>
               I&apos;m not currently looking for new opportunities, but feel

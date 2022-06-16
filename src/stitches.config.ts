@@ -22,7 +22,7 @@ export const { config, styled, getCssText, theme, createTheme, css } =
         ...tealDark,
         ...tomatoDark,
         uiBg: '$slate1',
-        uiBgLoContrast: 'hsl(200 7% 9% / 97%)',
+        uiBgLoContrast: 'hsl(200 7% 9% / 95%)',
         uiHoverGradient:
           'linear-gradient(62deg, rgb(48 69 90) 0%, rgb(108 82 133) 100%)',
         surface1: '$slate1',
@@ -226,7 +226,7 @@ export const lightTheme = createTheme({
     ...slate,
     ...tomato,
     uiBg: '$slate1',
-    uiBgLoContrast: 'hsl(206, 30.0%, 98.8%)',
+    uiBgLoContrast: 'hsl(206, 30.0%, 99%, 94%)',
     uiHoverGradient: 'linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)',
     surface1: '$slate1',
     surface2: '$slate12',

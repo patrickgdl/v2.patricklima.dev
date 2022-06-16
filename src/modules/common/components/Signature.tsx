@@ -64,8 +64,8 @@ const Signature = ({
   return (
     <svg
       ref={svgRef}
-      width='86'
-      height='88'
+      width='72'
+      height='74'
       viewBox='0 0 86 88'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'

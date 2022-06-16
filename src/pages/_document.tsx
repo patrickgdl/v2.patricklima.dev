@@ -17,7 +17,7 @@ export default class Document extends NextDocument {
             href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Newsreader:ital,wght@0,300;0,400;1,300;1,400&display=swap'
             rel='stylesheet'
           ></link>
-          <link rel='shortcut icon' href='/favicon.png' />
+          <link rel='shortcut icon' href='/favicon.ico' />
           <style
             id='stitches'
             dangerouslySetInnerHTML={{ __html: getCssText() }}
