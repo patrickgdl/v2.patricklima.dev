@@ -48,7 +48,7 @@ const Index = ({
 
             <Paragraph>
               <Text family='serif'>Frontend UI developer </Text>
-              interested in design systems, component architectures and
+              interested in design, artificial inteligence, linguistics and
               JavaScript frameworks, specially React and Angular.
             </Paragraph>
 
